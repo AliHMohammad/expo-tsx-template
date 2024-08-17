@@ -81,7 +81,7 @@ const RestaurantScreenStack = () => {
     return (
         <RestaurantsStack.Navigator initialRouteName="Restaurants">
             <RestaurantsStack.Screen name="Restaurants" component={RestaurantsScreen} />
-            <RootStack.Screen name="Restaurant" component={RestaurantScreen} />
+            <RestaurantsStack.Screen name="Restaurant" component={RestaurantScreen} />
         </RestaurantsStack.Navigator>
     );
 };
