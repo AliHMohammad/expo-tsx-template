@@ -1,15 +1,14 @@
-import { NativeWindStyleSheet, useColorScheme } from "nativewind";
 import React from "react";
-import { ExploreScreen } from "./screens/Explore";
+import { NativeWindStyleSheet } from "nativewind";
+// For ikoner, så se https://icons.expo.fyi/Index med filtrering på ionicons
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { HomeScreen } from "./screens/Home";
 import { ProfileScreen } from "./screens/Profile";
 import { RestaurantsScreen } from "./screens/Restaurants";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { RestaurantScreen } from "./screens/Restaurant";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-// For ikoner, så se https://icons.expo.fyi/Index med filtrering på ionicons
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { StyleSheet } from "react-native";
 
 NativeWindStyleSheet.setOutput({
     default: "native",
@@ -17,7 +16,7 @@ NativeWindStyleSheet.setOutput({
 
 export type RootStackParams = {
     // undefined betyder, at den ikke modtager nogen parameter
-    Explore: undefined;
+    Home: undefined;
     Profile: undefined;
     // En af vores tabs har en stack. Den skal vi smide i en NavigatorScreenParams
     RestaurantsStack: RestaurantsStackParams;
@@ -46,15 +45,15 @@ const RestaurantsStack = createNativeStackNavigator<RestaurantsStackParams>();
 export default function App() {
     return (
         <NavigationContainer>
-            <RootStack.Navigator initialRouteName="Explore" screenOptions={{ tabBarStyle: {} }}>
+            <RootStack.Navigator initialRouteName="Home" screenOptions={{ tabBarStyle: {} }}>
                 <RootStack.Screen
                     options={{
                         tabBarLabel: "Home",
                         headerTitle: "Velkommen Ali",
                         tabBarIcon: ({ color, focused, size }) => <Ionicons name="home" size={32} color={color} />,
                     }}
-                    name="Explore"
-                    component={ExploreScreen}
+                    name="Home"
+                    component={HomeScreen}
                 />
                 <RootStack.Screen
                     options={{

@@ -12,8 +12,8 @@ export const Menu = () => {
     return (
         <>
             <View className="bg-gray-300 py-2">
-                <TouchableOpacity onPress={() => navigation.navigate("Explore")}>
-                    <Text className="text-blue-600 font-bold text-lg pl-4">Explore</Text>
+                <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+                    <Text className="text-blue-600 font-bold text-lg pl-4">Home</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
                     <Text className="text-blue-600 font-bold text-lg pl-4">Profile</Text>
