@@ -11,14 +11,14 @@ export const Menu = () => {
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParams>>();
     return (
         <>
-            <View className="bg-gray-300 mt-3 py-2">
+            <View className="bg-gray-300 py-2">
                 <TouchableOpacity onPress={() => navigation.navigate("Explore")}>
                     <Text className="text-blue-600 font-bold text-lg pl-4">Explore</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
                     <Text className="text-blue-600 font-bold text-lg pl-4">Profile</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("Restaurants")}>
+                <TouchableOpacity onPress={() => navigation.navigate("RestaurantsStack")}>
                     <Text className="text-blue-600 font-bold text-lg pl-4">Restaurants</Text>
                 </TouchableOpacity>
             </View>

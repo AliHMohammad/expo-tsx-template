@@ -7,7 +7,7 @@ interface Props extends TextProps {
 
 export const ScreenTitle = (props: Props) => {
     return (
-        <Text {...props} className="text-3xl font-bold pt-6">
+        <Text {...props} className="text-3xl font-bold mb-3">
             {props.children}
         </Text>
     );
