@@ -18,7 +18,6 @@ export type RootStackParams = {
     // undefined betyder, at den ikke modtager nogen parameter
     Home: undefined;
     Profile: undefined;
-    // En af vores tabs har en stack. Den skal vi smide i en NavigatorScreenParams
     RestaurantsStack: RestaurantsStackParams;
     Restaurant: {
         name: string;
