@@ -1,13 +1,16 @@
-import { View, Text, ViewProps } from "react-native";
+import { View, Text, ViewProps, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 interface Props extends ViewProps {
     name: string;
+    onPress?: (name: string) => void;
 }
 
 export const RestaurantCard = (props: Props) => {
     return (
-        <View {...props} className="bg-red-400 p-4">
-            <Text>Restaurant {props.name}</Text>
-        </View>
+        <TouchableOpacity onPress={() => props.onPress?.(props.name)}>
+            <View {...props} className="bg-red-400 p-4">
+                <Text>{props.name}</Text>
+            </View>
+        </TouchableOpacity>
     );
 };
