@@ -1,8 +1,8 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
 import { RestaurantCard } from "../components/RestaurantCard";
 import { ScreenTitle } from "../components/Text";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RestaurantsStackParams, RootStackParams } from "../App";
+import { RestaurantsStackParams } from "../App";
 
 interface Props extends NativeStackScreenProps<RestaurantsStackParams, "Restaurants"> {}
 

@@ -18,9 +18,9 @@ export const Menu = () => {
                 <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
                     <Text className="text-blue-600 font-bold text-lg pl-4">Profile</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("RestaurantsStack")}>
+                {/* <TouchableOpacity onPress={() => navigation.navigate("RestaurantsStack")}>
                     <Text className="text-blue-600 font-bold text-lg pl-4">Restaurants</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         </>
     );

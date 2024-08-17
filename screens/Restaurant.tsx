@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { ScreenTitle } from "../components/Text";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RestaurantsStackParams } from "../App";

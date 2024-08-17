@@ -1,4 +1,4 @@
-import { View, Text, ViewProps, TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { View, Text, ViewProps, TouchableOpacity } from "react-native";
 
 interface Props extends ViewProps {
     name: string;

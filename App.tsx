@@ -1,4 +1,4 @@
-import { NativeWindStyleSheet } from "nativewind";
+import { NativeWindStyleSheet, useColorScheme } from "nativewind";
 import React from "react";
 import { ExploreScreen } from "./screens/Explore";
 import { ProfileScreen } from "./screens/Profile";
@@ -9,6 +9,7 @@ import { RestaurantScreen } from "./screens/Restaurant";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 // For ikoner, så se https://icons.expo.fyi/Index med filtrering på ionicons
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { StyleSheet } from "react-native";
 
 NativeWindStyleSheet.setOutput({
     default: "native",
@@ -45,7 +46,7 @@ const RestaurantsStack = createNativeStackNavigator<RestaurantsStackParams>();
 export default function App() {
     return (
         <NavigationContainer>
-            <RootStack.Navigator initialRouteName="Explore">
+            <RootStack.Navigator initialRouteName="Explore" screenOptions={{ tabBarStyle: {} }}>
                 <RootStack.Screen
                     options={{
                         tabBarLabel: "Home",
